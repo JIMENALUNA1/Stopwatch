@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: serif;
+    font-weight: 300;
+    background: linear-gradient(45deg, #8ffcf0, #e07bb4);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 800px;
+    margin: 150px auto;
+    color: #fff;
+    text-align: center;
+}
+
+.wrap {
+    display: inline-block;
+    min-width: 360px;
+    min-height: 400px;
+    padding: 50px 15px;
+    background-color: #fff;
+    box-shadow: 0 5px 25px #0000004a;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.wrap2 {
+    display: inline-block;
+    min-width: 360px;
+    min-height: auto;
+    padding: 50px 15px;
+    background-color: #fff;
+    box-shadow: 0 5px 25px #0000004a;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#timer {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    line-height: 250px;
+    font-size: 32px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+p {
+    font-weight: 400;
+    color: gray;
+    padding: 30px 0;
+}
+
+#play, #reset {
+    width: 32%;
+    height: 55px;
+    line-height: 55px;
+    border-radius: 50px;
+    color:#fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #86e391f5, #7ed0db);
+    box-shadow: 0 8px 25px #adea7fd2, 0 8px 25px, #63ac71ed;
+    transition: all ease 0.1s;
+}
+
+#stop {
+    width: 32%;
+    height: 55px;
+    line-height: 55px;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #86e391f5, #7ed0db);
+    box-shadow: 0 8px 25px #adea7fd2, 0 8px 25px, #63ac71ed;
+    transition: all ease 0.1s;
+}
+
+#play:active, #reset:active, #stop:active {
+    transform: scale(0.95);
+}
+
+#stop .fa {
+    margin-right: 5px;
+}
+
+#fa-play {
+    padding-left: 5px;
+}
+
+.pause .fa-play,
+.fa-pause {
+    display: none;
+}
+
+.pause .fa-pause {
+    display: inline-block;
+}
+
+/* Circle Animation */
+#timer svg {
+    position: absolute;
+    left: 0;
+}
+
+.defaultCircle {
+    opacity: 0.3s;
+}
+
+#animateCircle.addAnimation {
+    stroke-dasharray: 770;
+    stroke-dashoffset: -770;
+    animation: animateCircle 60s linear infinite;
+    animation-play-state: paused;
+}
+
+@keyframes animateCircle {
+    from {
+        stroke-dashoffset: 0;
+    }
+}
+
+#lap {
+    width: 90%;
+    height: 55px;
+    line-height: 55px;
+    border-radius: 30px;
+    color: #fff;
+    margin-top: 5vh;
+    cursor: pointer;
+    background: linear-gradient(45deg, #8ffcf0, #e07bb4);
+    box-shadow: 0 8px 25px #bf5fc045, 0 8px 25px, #ff00ec50;
+    transition: all ease 0.1s;
+}
+
+#lap:active {
+    transform: scale(0.95);
+}
+
+#lap .fa {
+    margin-right: 5px;
+}
+
+#lapTimes {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.laptable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.laptable th, .laptable td {
+    padding: 10px;
+    width: 50%;
+    text-align: center;
+}
+
+.laptable th {
+    background-color: #f77a45;
+    color: white;
+}
+
+.laptable td {
+    background-color: #f5f5f5;
+}
+
+.option {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.option a {
+    margin: 0 10px;
+    text-decoration: none;
+    display: inline-block;
+    height: 55px;
+    line-height: 55px;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    background: linear-gradient(45deg, #b0cf73, #74b1dc);
+    box-shadow: 0 8px 25px #eaa207d9, 0 8px 25px, #efa031df;
+    transition: all ease 0.1s;
+}
+
+.option a:active {
+    transform: scale(0.95);
+}
+
+.option a .fa {
+    margin-right: 5px;
+}
+
+.option:first-child a {
+    width: 30%;
+}
+
+.option:last-child a {
+    width: 90%;
+    border-radius: 30px;
+}
+
+.tohide {
+    font-size: 5vh;
+    color: #eea531;
+    margin-top: 4vh;
+}
+
+#reset, #lap {
+    font-weight: bold;
+}

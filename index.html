@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+    <div id="timer">
+        <svg width="260" height="260">
+            <circle class="defaultCircle" cx="125" cy="125" r="120" stroke="#635bfc" stroke-width="10" fill="none" 
+                stroke-linecap="round"/>
+            <circle class="animateCircle" id="animateCircle" cx="125" cy="125" r="120" stroke="#635bfc" stroke-width="10" fill="none" 
+                stroke-linecap="round"/>
+        </svg>
+        <span id="hours">00</span>
+        <span id="minutes">00</span>
+        <span id="seconds">00</span>
+        <span id="milliseconds">00</span>
+    </div>
+    <p>Your time starts now</p>
+    <div class="option">
+        <a id="play" onclick="playFunc();" href="javascript:void(0)">
+            Play
+        </a>
+        <a id="stop" onclick="stopFunc();" href="javascript:void(0)">
+            Stop
+        </a>
+        <a id="reset" onclick="resetFunc();" href="javascript:void(0)">
+            <i class="fa fa-undo"></i> Reset
+        </a>
+    </div>
+    <div class="option">
+        <a id="lap" onclick="lapFunc();" href="javascript:void(0)">
+            <i class="fa fa-clock"></i> Lap
+        </a>
+    </div>
+</div>
+<div class="wrap2">
+    <table class="laptable" border="1">
+        <thead>
+            <tr>
+                <th class="lap_no">Lap Number</th>
+                <th class="lap_time">Time</th>
+            </tr>
+        </thead>
+        <tbody id="lapTableBody"></tbody>
+    </table>
+    <div class="tohide" id="tohide">No History</div>
+</div>
+</body>
+</html>
